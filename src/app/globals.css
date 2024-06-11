@@ -20,7 +20,7 @@ body {
 }
 
 .hover:hover {
-  color: #FAFAFA;
+  color: #f7931b;
   border-bottom: 1px solid white;
 }
 
@@ -46,4 +46,12 @@ body {
 
 .circle {
   animation: circle 4s linear infinite;
+}
+
+.news {
+  transition: transform 0.2s ease-in-out;
+}
+
+.bg {
+  background-color: rgba(42, 53, 61, .4);
 }

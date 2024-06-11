@@ -15,6 +15,11 @@ const config: Config = {
       blue: "#00488e",
       lightblue: "#049cfd",
       darkblue: "#03065B",
+      darkgray: "#2a353d",
+      accent: "#f7931b",
+      secondary: "#cccccc",
+      primary: "#222222",
+      green: "#38a3a5",
     },
   },
 

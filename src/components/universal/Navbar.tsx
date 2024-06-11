@@ -25,7 +25,7 @@ export default function Navbar() {
             <Link href="/tourney">TOURNEY</Link>
           </li>
           <li className="hover">
-            <Link href="/faceit">FACEIT 10MAN</Link>
+            <Link href="/faceit">HUB</Link>
           </li>
           <li className="hover">
             <Link href="/prizes">PRIZES</Link>
