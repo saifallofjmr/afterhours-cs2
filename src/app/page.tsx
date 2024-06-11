@@ -45,9 +45,6 @@ export default function Home() {
       </div>
     </div>
 
-    //recent events or news
-    5v5
-    wingman 2v2 sharkboys
     
 
     </div>
