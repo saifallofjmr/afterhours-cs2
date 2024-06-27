@@ -18,14 +18,14 @@ const Card = ({ name, image }: { name: string; image: string }) => {
 
 export default function Staff() {
   return (
-    <div>
-      <h1 className="m-5 text-center text-5xl font-bold text-white">STAFF</h1>
-      <p className="montserrat text-center text-xl text-white">
+    <div className="">
+      <h1 className="m-5 text-center text-6xl font-bold text-white border-b-[1px] w-[10%] mx-auto border-accent">STAFF</h1>
+      <p className="montserrat text-center text-xl text-white w-1/2 mx-auto">
         Our staff is here to help. We are dedicated to the cause. All of our
         members are actively engaged in the community and working hard for our
         growth!
       </p>
-      <div className="mt-10 grid grid-cols-4 gap-10">
+      <div className="w-[60%] mt-10 grid grid-cols-4 gap-10 mx-auto">
 
         {/* CHANGE NAME/IMAGE FOR NEW CONTENT */}
         <Card image="/assets/ct-pfp.png" name="mousee" />

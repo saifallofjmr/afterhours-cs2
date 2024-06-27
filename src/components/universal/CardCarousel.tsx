@@ -1,4 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { MdNavigateNext } from "react-icons/md";
+import { MdNavigateBefore } from "react-icons/md";
+
 
 const CardCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -29,60 +33,64 @@ const CardCarousel: React.FC = () => {
     },
   ];
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
+  const handlePrev = () => {
+    if (currentIndex == 0) {
+      setCurrentIndex(cards.length - 1);
+    } else if (currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1);
+    }
   };
 
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + cards.length) % cards.length,
-    );
+  const handleNext = () => {
+    if (currentIndex == cards.length - 1) {
+      setCurrentIndex(0);
+    } else if (currentIndex < cards.length - 1) {
+      setCurrentIndex((prev) => prev + 1);
+    }
   };
-  if (currentIndex === cards.length - 1) {
-    setCurrentIndex(0);
-  } else if (currentIndex > cards.length - 2) {
-    setCurrentIndex(cards.length - 2);
-  }
-  
+
   return (
     <div className="mt-2 text-darkblue">
-      <div className="relative w-[100%]">
-        <div className="flex items-center justify-center space-x-4">
-          {cards.slice(currentIndex, currentIndex + 2).map((card, index) => (
+      <div className="relative w-full">
+        <div className="flex items-center justify-center">
+          {cards.slice(currentIndex, currentIndex + 1).map((card, index) => (
             <div
-              className="w-1/3 flex-none rounded-lg bg-white p-4 shadow-md"
+              className="rounded-lg bg-white p-4 shadow-xl transition hover:scale-110 relative z-30 active:scale-90"
               key={index}
             >
               <img
-                className="mb-4 h-32 w-full rounded-lg object-cover"
+                className="mb-4 h-[300px] rounded-lg object-cover mx-auto border-2 w-full"
                 src={card.image}
                 alt="Card"
               />
-              <h3 className="text-lg font-bold">{card.title}</h3>
-              <p className="text-gray-500">{card.description}</p>
-              {card.link && ( // Check if the 'link' property exists
-                <a
-                  href={card.link}
-                  className="bg-blue-500 hover:bg-blue-700 mt-2 inline-block rounded px-4 py-2 text-center font-bold"
-                >
-                  Learn More
-                </a>
+              <h3 className="py-2 text-2xl font-bold">{card.title}</h3>
+              <p className="text-gray-500 py-2">{card.description}</p>
+              {card.link && (
+                <button className="mt-3 rounded-lg bg-darkblue text-white">
+                  <a
+                    href={card.link}
+                    className="bg-blue-500 hover:bg-blue-700 flex h-10 w-28 items-center justify-center rounded text-center font-bold"
+                  >
+                    Join Now
+                  </a>
+                </button>
               )}
             </div>
           ))}
         </div>
+
         <div className="relative bottom-44 mt-4 flex items-center justify-between">
           <button
-            className="relative -right-32 h-10 w-10 rounded-full bg-white"
+            className="relative -right-[300px] h-10 w-10 rounded-full bg-white flex items-center justify-center text-3xl active:scale-90 hover:scale-125 transition"
             onClick={handlePrev}
           >
-            &lt;
+            <MdNavigateBefore/>
           </button>
           <button
-            className="relative -left-32 h-10 w-10 rounded-full bg-white"
+            className="relative -left-[300px] h-10 w-10 rounded-full bg-white flex items-center justify-center text-3xl active:scale-90 hover:scale-125 transition"
             onClick={handleNext}
           >
-            &gt;
+            <MdNavigateNext />
           </button>
         </div>
       </div>

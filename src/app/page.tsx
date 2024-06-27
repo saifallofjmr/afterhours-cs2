@@ -73,17 +73,6 @@ export default function Home() {
               </motion.span>
             </h1>
           </AnimatePresence>
-          {/* <h1 className="text-6xl font-bold poppins h-40">
-            <Typing
-              texts={[
-                "COMPETITION",
-                "SCENE",
-                "LEGACY",
-              ]}
-              typingSpeed={100}
-              pauseDuration={1000}
-            />
-          </h1> */}
 
           <button className="poppins m-7 mx-auto h-10 w-40 rounded-lg bg-primary text-lg font-medium text-white shadow-xl hover:bg-accent hover:text-bg">
             <Link
@@ -96,7 +85,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-20 flex flex-col items-center justify-center">
+      <div className="mt-48 flex flex-col items-center justify-center">
         <h3 className="text-bluegray">LATEST</h3>
         <h1 className="poppins border-b-2 text-center text-5xl font-bold text-bluegray">
           NEWS

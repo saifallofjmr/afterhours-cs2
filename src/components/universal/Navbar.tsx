@@ -1,9 +1,14 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const path = usePathname();
+
   return (
-    <header className="poppins text-bluegray flex justify-between font-bold">
+    <header className={`poppins text-bluegray flex justify-between font-bold z-50 relative px-40 ${path == '/' ? 'bg-bg bg-opacity-80' : ''}`}>
       <div>
         <Image
           src="/assets/logo.png"
@@ -13,7 +18,7 @@ export default function Navbar() {
           className="w-36"
         />
       </div>
-      <nav className="flex items-center">
+      <nav className="flex items-center text-xl">
         <ul className="flex space-x-7">
           <li className="hover">
             <Link href="/">HOME</Link>
