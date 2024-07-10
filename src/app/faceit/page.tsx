@@ -16,7 +16,7 @@ const Card = ({
 }) => {
   return (
     <a href={href}>
-      <div className="max-w-sm overflow-hidden rounded shadow-lg transition duration-100 ease-in-out hover:-translate-y-4 hover:opacity-80">
+      <div className="max-w-sm overflow-hidden rounded shadow-lg transition duration-75 ease-in-out hover:-translate-y-4 hover:opacity-80">
         <Image
           src={image}
           width={10000}

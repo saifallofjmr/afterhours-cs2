@@ -54,7 +54,7 @@ const CardCarousel: React.FC = () => {
         <div className="flex items-center justify-center">
           {cards.slice(currentIndex, currentIndex + 1).map((card, index) => (
             <div
-              className="relative z-30 rounded-lg border-[1px] border-neonblue bg-[#000000] p-4 shadow-xl transition hover:scale-110 active:scale-90 md:w-[25%]"
+              className="relative z-30 rounded-lg border-[1px] border-neonblue bg-[#000000] p-4 shadow-xl  md:w-[25%]"
               key={index}
             >
               <img
@@ -65,11 +65,11 @@ const CardCarousel: React.FC = () => {
               <h3 className="py-2 text-2xl font-bold">{card.title}</h3>
               <p className="text-gray-500 py-2">{card.description}</p>
               {card.link && (
-                <button className="mt-3 rounded-lg bg-darkblue text-white">
+                <button className="mt-3 rounded-lg bg-darkblue text-white transition hover:scale-110 active:scale-90">
                   <a
                     href={card.link}
                     target="_blank"
-                    className="bg-blue-500 hover:bg-blue-700 flex h-10 w-28 items-center justify-center rounded text-center font-bold"
+                    className="bg-blue-500 hover:bg-blue-700 flex h-10 w-28 items-center justify-center rounded text-center font-bold "
                   >
                     Join Now
                   </a>
