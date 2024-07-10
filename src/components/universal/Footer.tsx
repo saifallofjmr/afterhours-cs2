@@ -7,7 +7,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="mt-16 flex w-full flex-col items-center justify-center gap-4 py-10 text-sm text-bluegray">
+    <footer className="mt-16 flex lg:w-full flex-col items-center justify-center gap-4 py-10 text-sm text-bluegray">
       <div>
         <Image
           src={"/assets/navbar.png"}
@@ -17,9 +17,8 @@ export default function Footer() {
           className="w-28 object-cover"
         />
       </div>
-      <div></div>
 
-      <div className="flex flex-row gap-10 text-xl">
+      <div className="flex flex-row gap-10 text-lg md:text-xl">
         <Link href={"https://x.com/AfterHoursCS2"} target="_blank">
           <FaXTwitter className="" />
         </Link>
@@ -33,7 +32,7 @@ export default function Footer() {
           <MdEmail />
         </Link>
       </div>
-      <div className="flex space-x-5 text-[15px]">
+      <div className="flex space-x-3 md:space-x-5 text-[12px] md:text-[15px]">
         <Link href={"/"} className="hover:underline">
           Home
         </Link>
@@ -53,7 +52,7 @@ export default function Footer() {
           Staff
         </Link>
       </div>
-      <div className="text-center text-[11px]">
+      <div className="text-center text-[10px] md:text-[11px]">
         Copyright &copy; {new Date().getFullYear()} Afterhours, Designed by{" "}
         <Link
           href={"https://pantheras.ca"}

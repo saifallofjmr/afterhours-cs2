@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import CardCarousel from "@/components/universal/CardCarousel";
@@ -35,14 +35,14 @@ const Card = ({
 
 export default function Faceit() {
   return (
-    <div className="background-animate h-screen w-full bg-gradient-to-r from-[#2b5876] via-darkblue to-[#4e4376]  text-center text-white shadow-lg py-10 " >
-      <h1 className="poppins text-5xl font-semibold">FACEIT</h1>
-      <p className="montserrat m-10 mx-auto w-[40%] text-xl">
+    <div className="background-animate h-screen w-full bg-gradient-to-r from-[#2b5876] via-darkblue to-[#4e4376] py-10 text-center text-white shadow-lg">
+      <h1 className="poppins text-3xl font-semibold md:text-5xl">FACEIT</h1>
+      <p className="montserrat py-4 mx-auto text-sm w-[80%] md:p-9 md:w-[35%] md:text-xl">
         Sharpen your aim and dominate Counter-Strike 2 in our FACEIT Hub! Join
         the community for skilled matches and climb the leaderboards.
       </p>
       <div>
-      <CardCarousel />
+        <CardCarousel />
       </div>
     </div>
   );

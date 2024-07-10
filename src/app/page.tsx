@@ -59,7 +59,7 @@ export default function Home() {
         ></video>
         <div className="absolute flex flex-col items-center justify-center">
           <AnimatePresence mode="popLayout">
-            <h1 className="poppins mb-10 w-[834px] whitespace-nowrap text-6xl font-bold text-white">
+            <h1 className="poppins mb-10 w-[95%] text-2xl md:w-[834px] whitespace-nowrap md:text-6xl font-bold text-white">
               DEFINING THE{" "}
               <motion.span
                 key={wordsIndex}

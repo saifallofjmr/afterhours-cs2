@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 
 const Card = ({
@@ -16,15 +15,15 @@ const Card = ({
 }) => {
   return (
     <a href={href} target="_blank" className="inline-block w-1/2">
-      <div className="relative mx-auto flex w-full flex-col items-center justify-center overflow-hidden rounded-lg shadow-lg transition duration-100 ease-in-out hover:-translate-y-4 hover:opacity-80">
+      <div className="relative flex w-[300px] flex-col items-center justify-center overflow-hidden rounded-lg shadow-lg transition duration-100 ease-in-out hover:-translate-y-4 hover:opacity-80 md:w-full">
         <Image
           src={image}
           width={10000}
           height={10000}
           alt={alt}
-          className="z-0 max-h-80 w-full rounded-lg object-cover"
+          className="z-0 w-full rounded-lg object-cover max-h-80"
         />
-        <div className="absolute z-10 w-full items-center justify-center px-6 py-4 text-center text-white">
+        <div className="absolute z-10 mx-auto w-[300px] md:w-full items-center justify-center px-6 py-4 text-center text-white">
           <h5 className="mb-2 text-xl font-bold text-[#fafafae8]">{name}</h5>
           <p className="font-medium text-secondary">{content}</p>
         </div>
@@ -35,8 +34,8 @@ const Card = ({
 
 export default function News() {
   return (
-    <div className="background-animate h-screen w-full bg-gradient-to-r from-[#2b5876] via-darkblue to-[#4e4376]  pt-16">
-      <div className="flex flex-col items-center justify-center gap-14">
+    <div className="background-animate h-screen w-full bg-gradient-to-r from-[#2b5876] via-darkblue to-[#4e4376] pt-16">
+      <div className="flex flex-col items-center justify-center gap-14 w-1/2 md:w-full">
         {/* REPLACE NAME/CONTENT/IMAGE/HREF/ALT TO CHANGE CONTENT (HREF IS FOR LINKS) (ALT IS PRESERVED FOR PHOTO CREDITS AND ACCESSIBILITY) */}
         <Card
           name="AfterHours Season 2"

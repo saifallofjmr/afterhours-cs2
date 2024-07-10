@@ -15,7 +15,7 @@ const Card = ({
 }) => {
   return (
     <a href={href} target="_blank" className="inline-block w-1/2">
-      <div className="relative mx-auto flex w-full flex-col items-center justify-center overflow-hidden rounded-lg shadow-lg transition duration-100 ease-in-out hover:-translate-y-4 hover:opacity-80">
+      <div className="relative flex w-[300px] flex-col items-center justify-center overflow-hidden rounded-lg shadow-lg transition duration-100 ease-in-out hover:-translate-y-4 hover:opacity-80 md:w-full">
         <Image
           src={image}
           width={10000}
@@ -33,10 +33,9 @@ const Card = ({
 };
 
 export default function Prizes() {
-
   return (
-    <div className="background-animate h-screen w-full bg-gradient-to-r from-[#2b5876] via-darkblue to-[#4e4376]  pt-16">
-      <div className="flex flex-col items-center justify-center gap-14">
+    <div className="background-animate h-screen w-full bg-gradient-to-r from-[#2b5876] via-darkblue to-[#4e4376] pt-16">
+      <div className="flex w-1/2 flex-col items-center justify-center gap-14 md:w-full">
         {/* REPLACE NAME/CONTENT/IMAGE/HREF/ALT TO CHANGE CONTENT (HREF IS FOR LINKS) (ALT IS PRESERVED FOR PHOTO CREDITS AND ACCESSIBILITY) */}
         <Card
           name="AfterHours Season 2"
@@ -47,6 +46,5 @@ export default function Prizes() {
         />
       </div>
     </div>
-  )
-  
+  );
 }
