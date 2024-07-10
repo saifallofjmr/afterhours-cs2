@@ -33,11 +33,11 @@ const Card = ({
 
 export default function Tourney() {
   return (
-    <div>
-      <div className=" m-10 rounded-lg text-center text-white shadow-lg bg w-full mx-auto">
-        <h3 className="">CURRENT</h3>
+    <div className="">
+      <div className=" text-center text-white shadow-lg mx-auto background-animate h-screen w-full bg-gradient-to-r from-[#2b5876] via-darkblue to-[#4e4376] ">
+        <h3 className="pt-10">CURRENT</h3>
         <h1 className="poppins text-5xl font-semibold">TOURNEYS</h1>
-        <p className="montserrat m-10 mx-auto w-[70%] text-xl">
+        <p className="montserrat m-10 mx-auto w-[38%] text-xl">
           Sharpen your aim and dominate Counter-Strike 2 in our FACEIT Hub! Join
           the community for skilled matches and climb the leaderboards.
         </p>

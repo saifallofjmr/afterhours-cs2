@@ -8,10 +8,10 @@ export default function Navbar() {
   const path = usePathname();
 
   return (
-    <header className={`poppins text-bluegray flex justify-between font-bold z-50 relative px-40 ${path == '/' ? 'bg-bg bg-opacity-80' : ''}`}>
+    <header className={` p-6 poppins text-bluegray flex justify-between font-bold z-50 relative px-40 ${path == '/' ? 'bg-bg bg-opacity-80' : ''}`}>
       <div>
         <Image
-          src="/assets/logo.png"
+          src="/assets/navbar.png"
           width={1000}
           height={1000}
           alt="owl logo"

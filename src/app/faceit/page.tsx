@@ -35,9 +35,9 @@ const Card = ({
 
 export default function Faceit() {
   return (
-    <div className="rounded-lg bg-darkgray text-center text-white shadow-lg py-10 " >
+    <div className="background-animate h-screen w-full bg-gradient-to-r from-[#2b5876] via-darkblue to-[#4e4376]  text-center text-white shadow-lg py-10 " >
       <h1 className="poppins text-5xl font-semibold">FACEIT</h1>
-      <p className="montserrat m-10 mx-auto w-[70%] text-xl">
+      <p className="montserrat m-10 mx-auto w-[40%] text-xl">
         Sharpen your aim and dominate Counter-Strike 2 in our FACEIT Hub! Join
         the community for skilled matches and climb the leaderboards.
       </p>

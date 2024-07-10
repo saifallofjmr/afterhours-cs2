@@ -4,6 +4,7 @@ import { MdNavigateNext } from "react-icons/md";
 import { MdNavigateBefore } from "react-icons/md";
 
 
+
 const CardCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const cards = [
@@ -50,16 +51,16 @@ const CardCarousel: React.FC = () => {
   };
 
   return (
-    <div className="mt-2 text-darkblue">
+    <div className="mt-2 text-bluegray">
       <div className="relative w-full">
         <div className="flex items-center justify-center">
           {cards.slice(currentIndex, currentIndex + 1).map((card, index) => (
             <div
-              className="rounded-lg bg-white p-4 shadow-xl transition hover:scale-110 relative z-30 active:scale-90"
+              className="rounded-lg bg-[#000000] p-4 shadow-xl transition hover:scale-110 relative z-30 active:scale-90 border-[1px] border-neonblue w-[30%]"
               key={index}
             >
               <img
-                className="mb-4 h-[300px] rounded-lg object-cover mx-auto border-2 w-full"
+                className="mb-4 h-[390px] rounded-lg object-cover mx-auto border-[1px] border-neonblue w-full"
                 src={card.image}
                 alt="Card"
               />
@@ -69,6 +70,7 @@ const CardCarousel: React.FC = () => {
                 <button className="mt-3 rounded-lg bg-darkblue text-white">
                   <a
                     href={card.link}
+                    target="_blank"
                     className="bg-blue-500 hover:bg-blue-700 flex h-10 w-28 items-center justify-center rounded text-center font-bold"
                   >
                     Join Now
@@ -81,13 +83,13 @@ const CardCarousel: React.FC = () => {
 
         <div className="relative bottom-44 mt-4 flex items-center justify-between">
           <button
-            className="relative -right-[300px] h-10 w-10 rounded-full bg-white flex items-center justify-center text-3xl active:scale-90 hover:scale-125 transition"
+            className="relative -right-[550px] bottom-20 h-10 w-10 rounded-full bg-white flex items-center justify-center text-3xl active:scale-90 hover:scale-125 transition"
             onClick={handlePrev}
           >
             <MdNavigateBefore/>
           </button>
           <button
-            className="relative -left-[300px] h-10 w-10 rounded-full bg-white flex items-center justify-center text-3xl active:scale-90 hover:scale-125 transition"
+            className="relative -left-[550px] bottom-20 h-10 w-10 rounded-full bg-white flex items-center justify-center text-3xl active:scale-90 hover:scale-125 transition"
             onClick={handleNext}
           >
             <MdNavigateNext />

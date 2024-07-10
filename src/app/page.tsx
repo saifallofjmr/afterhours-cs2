@@ -49,13 +49,13 @@ export default function Home() {
 
   return (
     <div className="">
-      <div className="relative flex h-[720px] items-center justify-center">
+      <div className="relative flex items-center justify-center">
         <video
           src="/assets/looped-clip.mp4"
           autoPlay
           loop
           muted
-          className="opacity-50"
+          className="opacity-50 w-full object-cover h-[760px]"
         ></video>
         <div className="absolute flex flex-col items-center justify-center">
           <AnimatePresence mode="popLayout">
@@ -85,21 +85,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-48 flex flex-col items-center justify-center">
-        <h3 className="text-bluegray">LATEST</h3>
-        <h1 className="poppins border-b-2 text-center text-5xl font-bold text-bluegray">
-          NEWS
-        </h1>
-        <div className="circle m-10 rounded-lg transition duration-100 ease-in-out hover:-translate-y-4 hover:opacity-80">
-          {/* CHANGE NAME/CONTENT/IMAGE FOR NEW CONTENT */}
-          <Card
-            name="After Hours Season 2"
-            image="/assets/cash-cup.png"
-            content="Summer Break Cash Cup ($1000 USD)"
-            href="/news"
-          />
-        </div>
-      </div>
+
     </div>
   );
 }

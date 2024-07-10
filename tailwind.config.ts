@@ -20,6 +20,7 @@ const config: Config = {
       secondary: "#cccccc",
       primary: "#222222",
       green: "#38a3a5",
+      neonblue: "#1F51FF",
     },
   },
 
