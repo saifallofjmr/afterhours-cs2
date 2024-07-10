@@ -55,6 +55,7 @@ export default function Home() {
           autoPlay
           loop
           muted
+          playsInline
           className="opacity-50 w-full object-cover h-[760px]"
         ></video>
         <div className="absolute flex flex-col items-center justify-center">
