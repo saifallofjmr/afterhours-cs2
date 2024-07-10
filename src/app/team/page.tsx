@@ -48,7 +48,7 @@ export default function Team() {
   ];
 
   return (
-    <div className="bg-gray-100 flex flex-wrap min-h-screen items-center justify-center">
+    <div className="background-animate bg-gradient-to-r from-[#2b5876] via-darkblue to-[#4e4376] py-10 text-center shadow-lg flex flex-wrap min-h-screen items-center justify-center gap-y-6  md:gap-x-10 ">
       {teamData.map((team, index) => (
         <TeamsCard key={index} {...team} />
       ))}

@@ -129,6 +129,11 @@ export default function Navbar() {
                 location="/staff"
                 content="STAFF"
               />
+              <NavbarItemMobile
+                handleNavMobile={handleToggleNavOff}
+                location="/team"
+                content="TEAM"
+              />
             </motion.div>
           )}
         </AnimatePresence>
