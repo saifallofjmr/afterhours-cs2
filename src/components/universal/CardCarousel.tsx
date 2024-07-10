@@ -54,11 +54,11 @@ const CardCarousel: React.FC = () => {
         <div className="flex items-center justify-center">
           {cards.slice(currentIndex, currentIndex + 1).map((card, index) => (
             <div
-              className="border-neonblue relative z-30 rounded-lg border-[1px] bg-[#000000] p-4 shadow-xl transition hover:scale-110 active:scale-90 md:w-[25%]"
+              className="relative z-30 rounded-lg border-[1px] border-neonblue bg-[#000000] p-4 shadow-xl transition hover:scale-110 active:scale-90 md:w-[25%]"
               key={index}
             >
               <img
-                className="border-neonblue mx-auto mb-4 h-[200px] w-full rounded-lg border-[1px] object-cover md:h-[350px]"
+                className="mx-auto mb-4 h-[200px] w-full rounded-lg border-[1px] border-neonblue object-cover md:h-[350px]"
                 src={card.image}
                 alt="Card"
               />
@@ -81,13 +81,13 @@ const CardCarousel: React.FC = () => {
 
         <div className="relative bottom-44 mt-4 flex items-center justify-between">
           <button
-            className="relative -left-[40px] bottom-20 flex h-6 w-6 items-center justify-center rounded-full bg-white text-3xl transition hover:scale-125 active:scale-90 md:-right-[550px] md:h-10 md:w-10"
+            className="relative -left-[40px] bottom-20 flex h-6 w-6 items-center justify-center rounded-full bg-white text-3xl transition hover:scale-125 active:scale-90 md:left-[200px] lg:left-[510px] md:h-12 md:w-12"
             onClick={handlePrev}
           >
             <MdNavigateBefore />
           </button>
           <button
-            className="relative -right-[40px] bottom-20 flex h-6 w-6 items-center justify-center rounded-full bg-white text-3xl transition hover:scale-125 active:scale-90 md:-left-[550px] md:h-10 md:w-10"
+            className="relative -right-[40px] bottom-20 flex h-6 w-6 items-center justify-center rounded-full bg-white text-3xl transition hover:scale-125 active:scale-90 md:-left-[200px] lg:-left-[510px] md:h-12 md:w-12"
             onClick={handleNext}
           >
             <MdNavigateNext />
