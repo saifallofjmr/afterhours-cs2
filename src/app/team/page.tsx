@@ -5,7 +5,14 @@ export default function Team() {
     {
       imageUrl: "/assets/esea-logo.png",
       title: "AfterHours - ESEA Advance (S50, S49, S48, S47)",
-      players: ["1Freaky", "FRIZZY", "LittleBeer", "icarus", "TBD"],
+      url: "https://www.esea.net/teams/12345",
+      players: [
+        { name: "1Freaky", faceitUrl: "https://www.faceit.com/en/players/1Freaky" },
+        { name: "FRIZZY", faceitUrl: "https://www.faceit.com/en/players/FRIZZY" },
+        { name: "LittleBeer", faceitUrl: "https://www.faceit.com/en/players/LittleBEER" },
+        { name: "icarus", faceitUrl: "https://www.faceit.com/en/players/1lcarus" },
+        { name: "cMitch", faceitUrl: "https://www.faceit.com/en/players/CMitch", twitchUrl: "https://www.twitch.tv/cmitch" },
+      ],
     },
     {
       imageUrl: "/assets/odyssey.png",
