@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "afterHours eSports",
-  description: "The Best eSports Organization in North America. https://discord.gg/afterhourscs2/",
+  description: "The Best eSports Organization in North America. https://discord.gg/afterhourscs2",
 };
 
 export default function RootLayout({
