@@ -30,9 +30,13 @@ export default function TeamsCard({ imageUrl, title, players }: TeamCardProps) {
               className="cursor-pointer px-3 py-[3px] text-start text-sm text-white hover:text-accent md:px-5 md:text-lg"
               key={index}
             >
-              <a href={player.faceitUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                {player.name}
-              </a>
+              {player.faceitUrl ? (
+                <a href={player.faceitUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  {player.name}
+                </a>
+              ) : (
+                <span>{player.name}</span> // Render player's name without a link if no faceitUrl
+              )}
               {player.twitchUrl && (
                 <>
                   {" - "}
@@ -48,4 +52,3 @@ export default function TeamsCard({ imageUrl, title, players }: TeamCardProps) {
     </div>
   );
 }
-
