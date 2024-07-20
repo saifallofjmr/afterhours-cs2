@@ -1,69 +1,54 @@
-import TeamsCard from "@/components/TeamsCard";
+import React from "react";
 
-export default function Team() {
-  const teamData = [
-    {
-      imageUrl: "/assets/esea-logo.png",
-      title: "AfterHours - ESEA Advance (S50, S49, S48, S47)",
-      players: [
-        { name: "1Freaky", faceitUrl: "https://www.faceit.com/en/players/1Freaky" },
-        { name: "FRIZZY", faceitUrl: "https://www.faceit.com/en/players/FRIZZY" },
-        { name: "LittleBeer", faceitUrl: "https://www.faceit.com/en/players/LittleBEER" },
-        { name: "icarus", faceitUrl: "https://www.faceit.com/en/players/1lcarus" },
-        { name: "cMitch", faceitUrl: "https://www.faceit.com/en/players/CMitch", twitchUrl: "https://www.twitch.tv/cmitch" }
-      ]
-    },
-    {
-      imageUrl: "/assets/odyssey.png",
-      title: "AfterHours - Odyssey ESEA-IM (S50, S49, S48)",
-      players: [
-        { name: "Ciisco-", faceitUrl: "" },
-        { name: "Costerfunk", faceitUrl: "" },
-        { name: "slYc3", faceitUrl: "" },
-        { name: "Eckz", faceitUrl: "" },
-        { name: "syst3m4tt1c", faceitUrl: "" }
-      ]
-    },
-    {
-      imageUrl: "/assets/mirrored.png",
-      title: "AfterHours - Mirrored ESEA (IM) (S50, S49, S48)",
-      players: [
-        { name: "LeJoy-", faceitUrl: "" },
-        { name: "Vampyworm", faceitUrl: "" },
-        { name: "supyrk", faceitUrl: "" },
-        { name: "_-rekt-_", faceitUrl: "" },
-        { name: "-n9n-", faceitUrl: "" }
-      ]
-    },
-    {
-      imageUrl: "/assets/afterhours-club.png",
-      title: "AfterHours Club - S50 IM / S49 Open",
-      players: [
-        { name: "Evol", faceitUrl: "" },
-        { name: "CoreyInTheNA", faceitUrl: "" },
-        { name: "Draxido", faceitUrl: "" },
-        { name: "Gringochainz", faceitUrl: "" },
-        { name: "Tread", faceitUrl: "" }
-      ]
-    },
-    {
-      imageUrl: "/assets/nightwatch.png",
-      title: "AfterHours NightWatch - S50 IM / S49 Open",
-      players: [
-        { name: "Treybittie", faceitUrl: "" },
-        { name: "Tedd_yy", faceitUrl: "" },
-        { name: "-_St0rm", faceitUrl: "" },
-        { name: "discernn", faceitUrl: "" },
-        { name: "swagggymeat", faceitUrl: "" }
-      ]
-    }
-  ];
+type Player = {
+  name: string;
+  faceitUrl: string;
+  twitchUrl?: string; // Optional since not all players may have a Twitch link
+};
 
+type TeamCardProps = {
+  imageUrl: string;
+  title: string;
+  players: Player[];
+};
+
+export default function TeamsCard({ imageUrl, title, players }: TeamCardProps) {
   return (
-    <div className="background-animate bg-gradient-to-r from-[#2b5876] via-darkblue to-[#4e4376] py-10 text-center shadow-lg flex flex-wrap min-h-screen items-center justify-center gap-y-6 md:gap-x-10">
-      {teamData.map((team, index) => (
-        <TeamsCard key={index} {...team} />
-      ))}
+    <div className="flex h-60 w-80 md:w-[50%] md:h-[50%] items-center rounded-md border bg-bg shadow-lg">
+      <img
+        src={imageUrl}
+        alt={title}
+        className="h-60 w-36 rounded-r-lg object-cover md:h-full md:w-60"
+      />
+      <div className="flex flex-col justify-between leading-normal">
+        <h1 className="mb-4 text-sm font-bold tracking-tight text-start px-2 text-white md:mb-2 md:px-5 md:text-2xl">
+          {title}
+        </h1>
+        <ul>
+          {players.map((player, index) => (
+            <li
+              className="cursor-pointer px-3 py-[3px] text-start text-sm text-white hover:text-accent md:px-5 md:text-lg"
+              key={index}
+            >
+              {player.faceitUrl ? (
+                <a href={player.faceitUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  {player.name}
+                </a>
+              ) : (
+                <span>{player.name}</span> // Render player's name without a link if no faceitUrl
+              )}
+              {player.twitchUrl && (
+                <>
+                  {" - "}
+                  <a href={player.twitchUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    Twitch
+                  </a>
+                </>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
