@@ -35,7 +35,7 @@ export default function TeamsCard({ imageUrl, title, players }: TeamCardProps) {
                   {player.name}
                 </a>
               ) : (
-                <span>{player.name}</span> // Render player's name without a link if no faceitUrl
+                <span>{player.name}</span> // Render the player's name without a link if no URL is provided
               )}
               {player.twitchUrl && (
                 <>
