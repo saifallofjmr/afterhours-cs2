@@ -29,7 +29,7 @@ export default function Team() {
       title: "AfterHours - Mirrored ESEA (IM) (S50, S49, S48)",
       players: [
         { name: "LeJoy-", faceitUrl: "https://www.faceit.com/en/players/LeJoy-" },
-        { name: "Sardines", faceitUrl: "https://www.faceit.com/en/players/Sardines" },
+        { name: "SardineS", faceitUrl: "https://www.faceit.com/en/players/SardineS" },
         { name: "supyrk", faceitUrl: "https://www.faceit.com/en/players/supyrk" },
         { name: "_-rekt-_", faceitUrl: "https://www.faceit.com/en/players/_-rekt-_" },
         { name: "-n9n-", faceitUrl: "https://www.faceit.com/en/players/-n9n-" }
